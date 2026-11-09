@@ -128,6 +128,12 @@ h1 { margin-bottom: 8px; font-family: Manrope, sans-serif; font-size: clamp(26px
 .form-section-title { display: flex; align-items: center; gap: 8px; margin: 19px 0 17px; color: #42465a; font-size: 11px; font-weight: 700; }
 .section-number { display: grid; width: 21px; height: 21px; place-items: center; border-radius: 7px; color: var(--brand-accent); background: color-mix(in srgb, var(--brand-accent) 9%, white); font-size: 9px; }
 .required-note { margin-left: auto; color: #a0a3af; font-size: 9px; font-weight: 400; }
+.session-panel { margin-bottom: 13px; padding: 12px 12px 0; border: 1px solid #eaebf1; border-radius: 9px; background: #fafafd; }
+.session-panel-title { margin: 0 0 10px; color: #777b8e; font-size: 9px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; }
+.brand-affid-row { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.6fr) minmax(54px, .55fr); gap: 12px; }
+.count-select-wrap { gap: 5px; padding-right: 7px; padding-left: 9px; }
+.count-select-wrap select { font-size: 9px; }
+.count-select-wrap .select-chevron { width: 11px; }
 .field { margin-bottom: 13px; }
 .field label { display: block; margin-bottom: 6px; color: #4a4e62; font-size: 10px; font-weight: 600; }
 .input-wrap { display: flex; height: 39px; align-items: center; gap: 9px; padding: 0 11px; border: 1px solid #e7e8ee; border-radius: 7px; background: #fff; transition: border-color .15s, box-shadow .15s; }
@@ -136,10 +142,13 @@ h1 { margin-bottom: 8px; font-family: Manrope, sans-serif; font-size: clamp(26px
 .input-wrap input { width: 100%; min-width: 0; height: 100%; padding: 0; border: 0; outline: 0; color: #363a4f; background: transparent; font-size: 10px; }
 .input-wrap input::placeholder { color: #b2b4bf; }
 .input-wrap input:focus-visible { outline: 0; }
-.select-wrap select { width: 100%; min-width: 0; height: 100%; padding: 0; appearance: none; border: 0; outline: 0; color: #363a4f; background: transparent; font-size: 10px; cursor: pointer; }
+.select-wrap select { width: 100%; min-width: 0; height: 100%; flex: 1 1 0; padding: 0; appearance: none; border: 0; outline: 0; color: #363a4f; background: transparent; font-size: 10px; cursor: pointer; }
 .select-wrap select:invalid { color: #b2b4bf; }
 .select-wrap select option { color: #363a4f; }
 .select-chevron { width: 14px; height: 14px; flex: 0 0 auto; fill: none; stroke: #8d91a0; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; }
+.url-preview { height: auto; min-height: 39px; padding-top: 9px; padding-bottom: 9px; background: #fafafd; }
+.url-preview output { color: #777c90; font-size: 10px; line-height: 1.5; overflow-wrap: anywhere; }
+.email-center-row { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 12px; }
 .password-toggle { padding: 5px 1px 5px 7px; border: 0; color: var(--brand-accent); background: transparent; font-size: 9px; font-weight: 600; cursor: pointer; }
 .field-hint { margin: 5px 0 0; color: #a3a6b1; font-size: 9px; }
 .otp-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; }
@@ -220,6 +229,14 @@ h1 { margin-bottom: 8px; font-family: Manrope, sans-serif; font-size: clamp(26px
   .setup-badge small { font-size: 8px; }
   .content-grid { grid-template-columns: minmax(0, 1fr); }
   .form-card { min-width: 0; padding: 19px 17px 17px; }
+  .session-panel { padding-right: 9px; padding-left: 9px; }
+  .brand-affid-row { grid-template-columns: minmax(0, .9fr) minmax(0, 1.2fr) minmax(48px, .75fr); gap: 8px; }
+  .brand-affid-row .select-wrap { gap: 5px; padding-right: 7px; padding-left: 7px; }
+  .brand-affid-row .field-icon { display: none; }
+  .brand-affid-row .count-select-wrap { padding-right: 5px; padding-left: 5px; }
+  .email-center-row { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 8px; }
+  .email-center-row .select-wrap { gap: 5px; padding-right: 7px; padding-left: 7px; }
+  .email-center-row .field-icon { display: none; }
   .journey-card { display: none; }
   .page-footer { font-size: 8px; }
 }
@@ -232,4 +249,6 @@ h1 { margin-bottom: 8px; font-family: Manrope, sans-serif; font-size: clamp(26px
   .environment { font-size: 9px; }
   .page-content { padding-right: 13px; padding-left: 13px; }
   .setup-badge { display: none; }
+  .brand-affid-row { grid-template-columns: minmax(0, .95fr) minmax(0, 1.2fr) minmax(48px, .8fr); gap: 6px; }
+  .session-panel { padding-right: 7px; padding-left: 7px; }
 }

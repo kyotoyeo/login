@@ -9,6 +9,33 @@ const codeButton = document.querySelector("#send-code");
 const codeMessage = document.querySelector("#code-message");
 const registrationForm = document.querySelector("#registration-form");
 const formMessage = document.querySelector("#form-message");
+const brandSelection = document.querySelector("#brand-selection");
+const affidInput = document.querySelector("#affid");
+const registrationUrl = document.querySelector("#registration-url");
+const registrationUrls = {
+  UM: "https://www.ultimamarkets.com/open-live-account-crm/",
+  PU: "https://www.puprime.com/live-account-test",
+  MO: "https://www.monetamarkets.com/open-live-account-crm",
+  SA: "https://www.startrader.com/live-account-crm/",
+  VT: "https://www.vtmarkets.com/bit-trade-now-test/",
+  VJP: "https://www.vantagetradings.com/open-live-account-crm/",
+};
+
+function updateRegistrationUrl() {
+  const baseUrl = registrationUrls[brandSelection.value];
+  if (!baseUrl) {
+    registrationUrl.textContent = "Select a brand with a configured URL to preview it.";
+    return;
+  }
+
+  const affid = affidInput.value.trim();
+  registrationUrl.textContent = affid
+    ? `${baseUrl}?affid=${encodeURIComponent(affid)}`
+    : baseUrl;
+}
+
+brandSelection.addEventListener("change", updateRegistrationUrl);
+affidInput.addEventListener("input", updateRegistrationUrl);
 
 brandButtons.forEach((button) => {
   button.addEventListener("click", () => {
