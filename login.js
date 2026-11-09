@@ -12,6 +12,7 @@ const formMessage = document.querySelector("#form-message");
 const brandSelection = document.querySelector("#brand-selection");
 const affidInput = document.querySelector("#affid");
 const registrationUrl = document.querySelector("#registration-url");
+const countSelection = document.querySelector("#count");
 const registrationUrls = {
   UM: "https://www.ultimamarkets.com/open-live-account-crm/",
   PU: "https://www.puprime.com/live-account-test",
@@ -20,6 +21,13 @@ const registrationUrls = {
   VT: "https://www.vtmarkets.com/bit-trade-now-test/",
   VJP: "https://www.vantagetradings.com/open-live-account-crm/",
 };
+
+function resetCountDefault() {
+  countSelection.value = "1";
+}
+
+resetCountDefault();
+window.addEventListener("pageshow", resetCountDefault);
 
 function updateRegistrationUrl() {
   const baseUrl = registrationUrls[brandSelection.value];
