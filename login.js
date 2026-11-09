@@ -15,8 +15,8 @@ const registrationUrl = document.querySelector("#registration-url");
 const countSelection = document.querySelector("#count");
 const registrationUrls = {
   UM: "https://www.ultimamarkets.com/open-live-account-crm/",
-  PU: "https://www.puprime.com/live-account-test",
-  MO: "https://www.monetamarkets.com/open-live-account-crm",
+  PU: "https://www.puprime.com/live-account-test/",
+  MO: "https://www.monetamarkets.com/open-live-account-crm/",
   SA: "https://www.startrader.com/live-account-crm/",
   VT: "https://www.vtmarkets.com/bit-trade-now-test/",
   VJP: "https://www.vantagetradings.com/open-live-account-crm/",
